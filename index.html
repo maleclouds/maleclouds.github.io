@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+    <title>Software Downloads</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,6 +16,7 @@
             width: 80%;
             margin: auto;
             overflow: hidden;
+            padding-top: 20px;
         }
         header {
             background: #333;
@@ -23,27 +24,30 @@
             padding: 10px 0;
             text-align: center;
         }
-        footer {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
+        .download-link {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
             text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download-link:hover {
+            background: #45a049;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My GitHub Pages Site</h1>
+        <h1>Welcome to My Software Downloads</h1>
     </header>
     <div class="container">
-        <h2>About</h2>
-        <p>This is a simple website hosted on GitHub Pages.</p>
+        <h2>Available Downloads</h2>
+        <a href="software.zip" class="download-link" download>Download Software</a>
+        <p>Click the link above to download the latest version of my software.</p>
     </div>
-    <footer>
-        <p>&copy; 2024 My GitHub Pages Site</p>
-    </footer>
 </body>
 </html>
