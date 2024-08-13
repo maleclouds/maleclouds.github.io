@@ -3,63 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retro 90s Website</title>
-    <style>
-        body {
-            background-color: #f0e68c;
-            color: #000080;
-            font-family: 'Courier New', Courier, monospace;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background-color: #ff69b4;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 3em;
-            margin: 0;
-            text-shadow: 2px 2px #ffffff;
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            color: #000080;
-            text-decoration: none;
-            font-size: 1.2em;
-            margin: 0 15px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .content {
-            padding: 20px;
-        }
-        footer {
-            background-color: #ff69b4;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Pijat Vitalitas</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My 90s Website</h1>
-    </header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
-    <div class="content">
-        <p>This is a sample website with a 90s theme. Enjoy the retro style!</p>
-    </div>
-    <footer>
-        <p>&copy; 1990s Retro Website</p>
-    </footer>
+    <h1>Pemesanan Pijat Vitalitas</h1>
+    <form id="massageForm">
+        <input type="text" id="name" placeholder="Nama" required>
+        <input type="text" id="phone" placeholder="Nomor Telepon" required>
+        <textarea id="message" placeholder="Pesan" rows="4" required></textarea>
+        <button type="submit">Kirim Pesanan</button>
+    </form>
+    <p id="statusMessage"></p>
+    
+    <script src="js/scripts.js"></script>
 </body>
 </html>
