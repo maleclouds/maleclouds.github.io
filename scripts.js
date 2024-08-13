@@ -8,9 +8,10 @@ document.getElementById('massageForm').addEventListener('submit', async function
     const ipAddress = await getIPAddress();
     const deviceType = getDeviceType();
 
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Nama%3A%20${encodeURIComponent(name)}%0ANomor%20Telepon%3A%20${encodeURIComponent(phone)}%0AMessage%3A%20${encodeURIComponent(message)}`;
-    const discordWebhookUrl = 'YOUR_DISCORD_WEBHOOK_URL';
+    // Discord Webhook URL
+    const discordWebhookUrl = 'https://discord.com/api/webhooks/1272903236910841856/3TacQcRbflDqiC3LfOwlJt1IJjDXEdXLXroZFbyFCRGugfPAubVonYLKnRUlxyj7b2YR';
 
+    // Prepare the payload for Discord
     const discordPayload = {
         embeds: [{
             title: 'New Massage Order',
@@ -21,12 +22,11 @@ document.getElementById('massageForm').addEventListener('submit', async function
                 { name: 'IP Address', value: ipAddress },
                 { name: 'Device Type', value: deviceType }
             ],
-            color: 65280
+            color: 65280 // Green color
         }]
     };
 
-    window.open(whatsappUrl, '_blank');
-
+    // Send message to Discord
     try {
         const response = await fetch(discordWebhookUrl, {
             method: 'POST',
@@ -43,6 +43,9 @@ document.getElementById('massageForm').addEventListener('submit', async function
         console.error('Error:', error);
         document.getElementById('statusMessage').innerText = 'Terjadi kesalahan. Silakan coba lagi.';
     }
+
+    // Open Instagram DM
+    window.open('https://instagram.com/direct/new?username=nfnfrmnsyh', '_blank');
 });
 
 async function getIPAddress() {
